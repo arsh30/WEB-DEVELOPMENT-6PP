@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 1) Heading Tags h1 to h6  [Block level elem -> complete horizontal space occupies ]  -->
+    <h1>Heading 1</h1>
+    <h2>Heading 2</h2>
+    <h3>Heading 3</h3>
+    <h4>Heading 4</h4>
+    <h5>Heading 5</h5>
+    <h6>Heading 6</h6>
+
+    <!-- 2) P Tag -> for Paragraph [Block level elem -> complete horizontal space occupies ]  -->
+    <p>Hello I am Arshdeep Singh</p>
+    <p>Hello</p>
+
+    <!-- 3) em Tag -> It gives in Italic format -> Inline Element [means 1 hi line me aayege] -->
+    <em>Hello</em> <em>Nice Tuit</em>
+
+    <!-- 4) br Tag -> Line Break [self closing tag] -->
+    <br />
+    <!-- 5) b Tag -> for Bold -->
+    <p><b> Arsh is very smart </b></p>
+
+    <!-- 6) i Tag -> Italic Tag -->
+    <p><i> Arsh is learning WEB DEVELOPMENT </i></p>
+
+    <!-- 7) span Tag -> same like em tag -> But it is Normal & Iit is "Inline" -->
+    <span>Hi How are you? </span> <span>I am Good</span>
+
+    <!-- 8) hr Tag -> Horiontal Line creation -->
+    <hr />
+
+    <!------------------------ LECTURE 2 BASIC TAGS ------------------- -->
+
+    <!-- 1) Anchor Tag & Abbrevation Tag -->
+    <!-- Anchor tag -> text ke andr link add krwata hai eg: koi text hai uspr agr click kre to dusra page open hojata h 
+        Abbrevation Tag -> means agr kisi link ke upr hoer krege to bta dega ki usme kya hai, so a tag ko isme wrap krdege
+    -->
+
+    <a href="http://google.com">Click to open google</a>
+    <!-- Note -> Noraml yeh same page pr open hora hai, so add 1 attribute ie target="_blank" isse dusre page pr open hoga -->
+    <abbr title="Hey this link is to open insta">
+      <a href="http://instagram.com" target="_blank"
+        ><p>Instagram open</p></a
+      ></abbr
+    >
+
+    <hr />
+
+    <!-- 2) List Tag -> Order & Undorder tag -->
+    <ul>
+      <!-- Ul is un order red list -> means uleets aajege -->
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+    </ul>
+
+    <ol type="i">
+      <!--types -> A, a, i, I -->
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+    </ol>
+
+    <hr />
+
+    <!-- 3) Images $ Video Tag  -->
+    <img src="" alt="pic" width="400px" />
+    <!-- Note in img -> heigth ya width koi ik dena hai sirf taki aspect atio maintain rhe 
+    alt -> means agr bychange imge load nahi hori to vo dikh jaega
+    src -> address or folder and file name of that image/ agr net se copy krni hai to copy image address and paste 
+        It is inline element
+-->
+
+    <video src="">
+      <!-- src -> video name.webcam or path of the video 
+    attribute  -> controls[control show hone lgege] autoplay[bydefault autoplay hoti rhegi] muted[bydefault video is mute]  width="400px" 
+    It is also inline element-->
+    </video>
+
+    <!-- 4) Audio Tag -->
+    <audio src="">
+      <!-- src -> audio name.mp3 agr kisi or folder me hai to pura address dalege 
+        attribute -> controls autoplay muted 
+    --></audio>
+
+    <br />
+    <hr />
+
+    <!-- 5) Table Tag -->
+    <table>
+      <thead>
+        <tr>
+          <!--  Row 1-->
+
+          <th>Food</th>
+          <th>Protein</th>
+          <th>Fat</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <!-- 2nd ROW start -->
+          <td>Egg</td>
+          <td>6gm</td>
+          <td>.5gm</td>
+        </tr>
+
+        <tr>
+          <!-- 3rd row -->
+          <td>EGG white</td>
+          <td>3gm</td>
+          <td>0gm</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!------------------------Lecture 3- ------------------------------  -->
+
+    <!-- 1) Non smentic tags  -->
+    <!-- div, span -->
+    <!-- kuch bhi banna ho to use div tag, iske andr hi bnate hai && It is block level element 
+    Non semantic tag means jiska koi purpose nahi hai kuch bhi daal skte hai -->
+
+    <!-- semantic Tags
+     article tag -> means pdhte hi smjhe aajaye ki article likhne ke liye hai
+    2) Header Tag- iske and Nav tag hota hai, means dekh kr pta lgjaye ki nav hai 
+    3) Section Tag ->  
+    Notemosly use div tags 
+    ---->
+
+    <!-- Note -> id -: sari jo tag bnaege unko classes and id denge to taki unko style kr ske 
+    2) id -> pure html me unique hoti hai 
+    3) classes -> same class muliple elem ko de skte hai, and claasses hum muliple de skte hai 1 element ko
+    -->
+
+    <h1>contact form</h1>
+    <form action=" write backend fill link" method="post">
+      <div>
+        <label for="username">username</label>
+        <input type="text" name="username" id="name" placeholder="enter name" />
+        <!-- note: jab database me save hoga toh => username [name me jo likha] = arshdeep [input field me jo likha vese save hoga] -->
+      </div>
+
+      <div>
+        <label for="email">Email</label>
+        <input type="text" name="email" id="email" />
+      </div>
+
+      <div>
+        <label for="message">Message</label>
+        <textarea name="message" id="" cols="10" rows="5"></textarea>
+      </div>
+
+      <div>
+        <label for="phoneNo">Phone Number</label>
+        <input type="number" name="number" id="number" />
+      </div>
+
+      <div>
+        <label for="">Gender</label>
+        <select name="Gender" id="">
+          <option value="male">Male</option>
+          <option value="female">FeMale</option>
+          <!-- Note -> value me jo likha hai vo ussi name se database me save hojega -->
+        </select>
+      </div>
+
+      <div>
+        <label for="Frontend">Frontend</label>
+        <input type="checkbox" name="skills" id="frontend" />
+        <label for="backend">Backend</label>
+        <input type="checkbox" name="skills" id="backend" />
+      </div>
+
+      <fieldset>
+        Cash: <input type="radio" name="payment" id="" /> Bank:<input
+          type="radio"
+          name="payment"
+          id=""
+        />
+        <!-- dono select hore hai   to agr hum chahte h hai ki ek select ho to 
+      dono ka name same rkhna hoga  -->
+      </fieldset>
+      <div>
+        Password: <input type="password" required name="password" id="" />
+      </div>
+
+      <input type="submit" value="submit" />
+
+      <!--  Note: require ttribute ->sare input tag pr lgado taki agr koi khali enter kre to hoye n -->
+    </form>
+  </body>
+</html>

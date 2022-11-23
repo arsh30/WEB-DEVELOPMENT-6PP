@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsiveness</title>
+  </head>
+
+  <style>
+    body {
+      background-color: peachpuff;
+    }
+
+    div {
+      background-color: crimson;
+      width: 21vw;
+      height: 21vw;
+      margin: 50px;
+    }
+
+    /* screen means kiski baat hori hai konsi media query like screen,
+      print ya voice , screen means sirf display the screen 
+      
+      -> all -> means sare deveice ke liye 
+      -> maxWidth -> means 0 - 1000 px tak hai to hi yeh wali properties apply hongi
+            jo isme likhege
+
+
+        2) Three ways  to make responsiveness
+        1) mediaquery -> least try krege ki na use kre
+        2) flexBox -> yeh use krege hi krege
+        3) Use responsive/relative units -> like vw, vmax, vh, vmin
+             vw -> screen ki width ka 20%
+
+             More responsiveness check on INternet but aspect ratio and maxwidth are enough
+      */
+
+    @media all and (max-width: 1000px) {
+      body {
+        background-color: aqua;
+      }
+      div {
+        background-color: green;
+      }
+
+      /* is ke andr sari styling de skte hai */
+    }
+  </style>
+
+  <body>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+  </body>
+</html>
+
+<!-- 1
+1) To make responsive we use media query
+
+-->

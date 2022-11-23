@@ -1,0 +1,47 @@
+.box {
+  background-color: rgb(45, 45, 45);
+  height: 100px;
+  width: 100px;
+  font: bold 2rem cursive;
+  color: white;
+  margin: 2vmax;
+  /* transition-property: background-color; Means yeh background property pr hi lgegi */
+  /*transition-duration: 0.5s; /*Means kitne time me chaiye */
+  /*transition-timing-function: linear; /*By defualt linear */
+  /*transition-timing-function: ease-in; /*start hoga slow end tak aate aate speed bdh jaegi */
+
+  /* transition-timing-function: ease-in-out; /*start hoga fast end tak ate ate slow hojega */
+  /* transition-delay: 2s; /*Means timming 2s delay hojega transition ka */
+
+  /* Transition short handProperty - kisko deni h , timing kitni der ke liye chaiye, linear,easein, delayTimming */
+  /* transition: background-color 1s ease-in-out 1s; */
+  transition: all 1s; /* means jin jinpr apply krna hai unsb pr hoga */
+}
+
+/* TRANSITION */
+.box:hover {
+  background-color: crimson;
+  /* Agr transition denge -> Toh ikdum smooth tarike se hoga */
+  color: blue;
+  /* width: 70%; */
+  box-shadow: 0 0 20px black;
+  /* -> x cordinate, y cordinate, blue kitni krni h, color  */
+
+  /* TRANSFORM TRANSITION */
+  /* transform: skewX(30deg); -> ye tilt hojega right side +30 mean right side, -30 means left side tilt
+  similarly for skew 'Y', 
+  */
+
+  /* transform: skew(30deg,30deg); -> x and yskew */
+
+  /* transform: translateY(100px); */
+  /* short hand property - translate: (100px (x), 100(y));  */
+  transform: translate(100px, 100px);
+
+  transform: scale(3, 2); /*Means 1.2 x and y direction me size increase hoga */
+
+  /* ROTATE */
+  transform: rotate(30deg); /*Rotate hojega , x, y ,z*/
+
+  transform: rotateZ(90deg) scale(2) translate(50%, 50%);
+}

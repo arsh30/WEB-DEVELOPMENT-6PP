@@ -1,0 +1,299 @@
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+nav {
+  /* border: 2px solid green; */
+  height: 4vmax;
+  display: flex;
+  align-items: center; /* Taki sb vertical arrange hoje*/
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.513);
+  position: sticky;
+  top: 0;
+  background-color: white; /* Agr koi bhi color nhi denge to jb scroll krege vo color lelega*/
+  z-index: 1000;
+}
+
+.left {
+  /* border: 2px solid salmon; */
+  width: 20vw;
+  /* or 20% of nav */
+  display: flex;
+  justify-content: center;
+}
+
+.left > a {
+  /* border: 1px solid yellowgreen; */
+  text-decoration: none;
+  color: crimson;
+  font-size: 2vmax;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  /* jo "6PP logo" hai vo left side me hai to usko mid me krna hai -> 
+  ways 1st textalign:end  krde 
+  2 -> left wale ko display flex de skte hai, left class ko kyuki parent hai
+  3 -> marginLeft de skte hai
+  */
+}
+
+.mid {
+  /* border: 2px solid rgba(226, 97, 226, 0.998); */
+  width: 60vw;
+  display: flex;
+  justify-content: space-evenly;
+  align-self: stretch; /* Taki jo niche borderbottom aara hai vo aata rhe vo upr na jaye, so ya to stretch property do ya fir height nav jitni kro*/
+}
+
+.mid > a {
+  /* border: 2px solid blue; */
+  text-decoration: none;
+  font-size: 1.4vmax;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: black;
+  width: 100%; /* Taki jo element hai vo puri lines le, but yeh kyu krra ?  taki brder jo hai sirf bottom se aaye */
+  display: flex; /*Taki andr ke item center pr aaje */
+  justify-content: center;
+  align-items: center;
+}
+
+.mid > a:hover {
+  border-bottom: 2px solid crimson;
+  color: crimson;
+}
+
+.right {
+  /* border: 2px solid rgb(258, 248, 114); */
+  width: 20vw;
+  display: flex;
+  justify-content: center;
+}
+
+.right > img {
+  font-size: 2.5vmax;
+  margin: 1vmax;
+  cursor: pointer;
+}
+
+/* -------------------------------------------------------------------------- */
+
+.home {
+  /* border: 2px solid crimson; */
+  height: 90vh; /*90%  */
+
+  background-image: radial-gradient(rgb(230, 221, 255), rgb(184, 184, 223));
+  /* background-image: linear-gradient(
+    to right,
+    rgb(152, 152, 216),
+    rgba(157, 0, 255, 0.516)
+  ); */
+  /*Gradient means color bnare hai -> 
+    1) 1st param - direction -> right ki trf chaiye
+    2) color
+    3) color
+    */
+  display: flex;
+}
+
+.container {
+  height: 100%; /*100% of parent ie body */
+  width: 100%;
+  /* border: 1px solid green; */
+}
+
+#rightContainer {
+  /* image jo aari hai chipki chipki aari hai so usko change krege*/
+  display: flex;
+  justify-content: flex-end;
+}
+
+#rightContainer > img {
+  margin-right: 7vmax;
+  filter: drop-shadow(
+    0 0 20px black
+  ); /*Taki image ke background me shadow aaje */
+}
+
+#leftContainer {
+  /* border: 1px solid red; */
+  display: flex;
+  flex-direction: column;
+  padding: 3vmax;
+  box-sizing: border-box;
+  justify-content: center;
+}
+
+#leftContainer > h1 {
+  /* border: 1px solid red; */
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 5vmax;
+}
+
+#leftContainer > h2 {
+  /* border: 1px solid red; */
+  margin-top: -3%;
+  font-family: sans-serif;
+  font-size: 2vmax;
+  margin-left: 2%;
+}
+
+#leftContainer > p {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.2vmax;
+  /* border: 1px solid red; */
+  margin-left: 2%;
+}
+
+#leftContainer > button {
+  margin-top: 20px;
+  padding: 1vmax;
+  width: 11vmax;
+  border-radius: 2vmax;
+  border: none;
+  background-color: crimson;
+  color: white;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  cursor: pointer;
+  margin-left: 2%;
+}
+
+#leftContainer > button:hover {
+  background-color: rgb(164, 35, 61);
+}
+
+/* ---------------PRODUCTS --------- */
+/* #products { 
+   height: 100vh; 
+  border: 1px solid green; 
+} */
+
+#products > h1 {
+  text-align: center;
+  margin: 5vmax auto; /*top bottom, left right */
+  font-size: 2.5vmax;
+  padding: 1vmax; /* kyuki border chipka hua aara hais */
+  border-bottom: 5px solid crimson;
+  width: 25vw;
+}
+
+.productsContainer {
+  display: flex;
+  justify-content: center;
+  /* background-color: aquamarine; */
+  flex-wrap: wrap;
+  /* justify-content: space-evenly; */
+  height: 100%;
+  max-width: 80vw;
+  margin: auto;
+}
+
+/* ----------------------------------- */
+.product {
+  /* border: 2px solid crimson; */
+  cursor: pointer;
+  transition: all 0.5s;
+  /* width: 22vmax; */
+  height: 30vmax;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1vmax;
+}
+.product > img {
+  /* border: 2px solid crimson; */
+  width: 20vmax;
+}
+
+.product > h4 {
+  margin: 2%;
+}
+
+.product > h5 {
+  margin: 0;
+}
+
+.product:hover {
+  transform: translateY(-10px);
+}
+
+/* ------------------------------------------------------ */
+
+footer {
+  margin-top: 10vmax;
+  /* height: 10vmax; */
+  padding: 2vmax;
+  background-color: rgba(0, 0, 0, 0.813);
+  color: white;
+  display: flex;
+
+  align-items: center;
+}
+
+.leftFooter {
+  width: 20vw;
+  /* border: 1px solid white; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.leftFooter > h4 {
+  margin: 2vmax;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.leftFooter > img {
+  width: 10vmax;
+  margin: 1vmax;
+  cursor: pointer;
+}
+
+.leftFooter > p {
+  text-align: center;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.midFooter {
+  width: 60vw;
+  /* border: 1px solid white; */
+  text-align: center;
+}
+
+.midFooter > h1 {
+  margin: 2vmax;
+  font-size: 4vmax;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: crimson;
+}
+
+.midFooter > p {
+  max-width: 60vw;
+  /* border: 1px solid white; */
+  margin: 1vmax auto;
+}
+
+.rightFooter {
+  width: 20vw;
+  /* border: 1px solid white; */
+  display: flex; /* coz a tag is inline element*/
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+}
+
+.rightFooter > h4 {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 1.4vmax;
+  text-decoration: underline;
+  margin: 3vmax;
+}
+
+.rightFooter > a {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 1.3vmax;
+  color: white;
+  text-decoration: none;
+  margin: 0.5vmax;
+}

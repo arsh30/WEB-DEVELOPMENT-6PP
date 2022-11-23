@@ -1,0 +1,83 @@
+/* 
+notes ->
+1) as a beginner koi bhi elementdesign krre hai to start hote uska border dedo, and height  
+2) Body ka kuch margin hota hai bydefault to usko 0 krege -> using universal selector
+3) Important -> Margin: auto: [margin dene ke liye ik display block element hona chaiyem,
+    and margin : uto ke liye width deni  neccesaary hai and display block
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+header {
+  /* border: 2px solid black; isko comment krdo after completing the nav bar*/
+  /* height: 100px; */
+  padding: 50px;
+  /* box-sizing: border-box;*/ /*because jo padding humne add kri hai, uski vjah se height bdh rhi hai header ki, so border box se usi me fix hojega
+   ie 100px ke andr andr padding ajegi*/
+  background-color: crimson;
+}
+
+header a {
+  color: beige; /* color: change text color jo a tag hai uska */
+  text-decoration: none; /* jo a tag ke niche underline aari thi usko remove krdega */
+  margin: 0px 20px; /* top bottom, left right */
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+header > a:hover {
+color: brown;
+}
+
+section {
+  /* border: 2px solid black; */
+  height: 400px;
+  width: 1000px;
+  margin: auto;
+  background-image: linear-gradient(
+    to bottom,
+    rgb(232, 127, 127),
+    rgb(152, 25, 51)
+  );
+  /* gardient -> means combination of 2 or 3 colors; 
+  1st hme direction btani hoti hai.: to bottom  (means jo bhi flow hai vo niche ke taraf jana chaiye
+  2nd hme color denge 
+  3 bhi color denge, so */
+  text-align: center;
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+section > h1 {
+  font-size: xx-large;
+  /*border: 1px solid black;*/ /* so jo bhi image lgaege vo iske niche aayegi */
+}
+
+section > img {
+  display: block;
+  width: 300px;
+  border-radius: 30px;
+
+  margin: auto;
+}
+
+footer {
+  /* border: 2px solid black; */
+  height: 100px;
+  width: 1000px;
+  margin: auto; /* Taki center me aje, jbhi auto prop use krege to dislay block honi  chiaye and width honi chiye*/
+  background-color: rgb(15, 13, 13);
+  text-align: center;
+  padding: 50px; /* ye overflow hora hai means jo hmne heigth di hai use bdi hori hai so box sizing border box denge*/
+  box-sizing: border-box;
+}
+
+footer > a {
+  /* border: 2px solid red; */
+  text-decoration: none;
+  color: white;
+  display: block;
+  /* text-align: center;*/ /* work nhi kra kyuki yeh block element nhi hai , so parent ko denge tbhi apply hojega*/
+}

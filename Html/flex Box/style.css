@@ -1,0 +1,64 @@
+div {
+  height: 100px;
+  width: 100px;
+  font-size: x-large;
+  background-color: aquamarine;
+}
+/* 
+1) div jo hai vo block element hai -> means puri row cover krra hai 
+2) flex container ->  body ko bnaya jise alag alag row me aare the sar ab ik row me aayege 
+
+container properties: ->
+justify -> main axis ki baat hori h means, [container me lgti hai yeh bhi , jisko flex diya hai]
+
+1) justify content: center, 
+                 :flex-start(start me aajege sare), 
+                 :flex-end (end me aajege sare),
+                 :space around ( sare div jo hote hai sabka margin equal distribute hojata hai)
+                 :space-between (har item ke bheech me equal space aajega -> 1st and last wale me nhi aayega)
+                 :space-evenly (har ke bheech me ikdum equally margin aayega , space around -> isme left or right ka margin equal tha
+                 but in this sabke bheech me equal hai)
+
+align items -> FOR Y AXIS OR CROSS AXIS [container me lgti hai yeh bhi , jisko flex diya hai]
+
+1) align-items: center, (vertically se center me aajege)
+              :flex-end (vertically ikdum niche aajega)
+              :flex-start (vertically ikdum upr aajega)
+              :flex-start (vertically ikdum upr aajega)
+              : stretch (jitne bhi item hai vo "sare stretch hojate starting se end tak"
+              but condition i ki height ni honi chaiye item ki
+              
+
+PROPERTIES FOR FLEX ITEMS
+
+1) align-self: flexend[vertically] baki prop all are same as above
+2) justify-self:center [horizontally] baki all prop are same
+
+
+FLEX-DIRECTION  -> ONLY APPLY TO FLEX CONTAINER
+
+1) flex-direction: row [default]
+                 : column [  sare column me aajege ]
+                 : column-reverse [column me rhege bss reverse order me ]
+                 : row-reverse [row me rhege bss reverse order me] 
+
+
+[NOTE -> Flex direction column krne ke baad , justify jo hota hai v y axis ke liye hojta hai
+and align item jo hai vo as a 'X'axis count hota hai ] 
+
+
+FLEX-WRAP:WRAP; Means agr 1 row me pure items nhi aare to it will go into the second row
+align-content:center; -> Like wrap krne ke baad verticall item me gap aajata hai usko remove krega yeh
+
+*/
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 80vh;
+  width: 80vw;
+  display: flex;
+  border: 2px solid rgb(10, 181, 10);
+  justify-content: center;
+  align-items: center;
+}

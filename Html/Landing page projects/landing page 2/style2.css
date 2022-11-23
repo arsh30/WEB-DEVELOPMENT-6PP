@@ -1,0 +1,62 @@
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+header {
+  /* border: 1px solid black; */
+  height: 100px;
+  background-color: brown;
+  padding: 40px; /* Taki elements andr na chipke */
+  box-sizing: border-box;
+}
+
+header > a {
+  /* border: 1px solid black; */
+  text-decoration: none;
+  color: white;
+  margin: 0 20px;
+}
+
+header > a:hover {
+  color: black;
+}
+
+/* ----------------------------- SECTION -------------------------------------------- */
+section {
+  /* border: 1px solid black; */
+  height: 400px;
+  width: 1000px;
+  background-image: linear-gradient(
+    to bottom,
+    rgb(140, 31, 31),
+    rgb(35, 35, 136)
+  );
+  text-align: center;
+  margin: auto;
+}
+
+section > h1 {
+  color: white;
+  padding: 50px;
+}
+
+section > img {
+  width: 150px;
+}
+
+/* ------------------------ FOOTER ---------------------------------- */
+footer {
+  height: 100px;
+  width: 1000px;
+  border: 1px solid black;
+  margin: auto;
+  background-color: brown;
+  text-align: center;
+}
+
+footer > a {
+  color: white;
+  text-decoration: none;
+  font-size: x-large;
+}

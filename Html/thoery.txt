@@ -1,0 +1,89 @@
+how web work
+
+->eg we search google.com -> so you tube ka server files serve krta hai html,css js 
+client ko
+
+Html -> It provides the structure of the webPage
+css ->  it provides the stlying to the component
+javascript -> It provides logic to our website: for eg: navbar pr click kra to kya hoga
+
+
+Syntax of HTML ------------
+
+<html>
+    <head> 
+     IN me title, seo frndly, meta info hoti hai 
+    </head>
+
+    <body>
+        webiste me jo show krwana hai vo isme likhege
+     </body>
+
+</html>
+
+-----------------------------------------
+    CSS --------------------------------->
+
+1) CSS -> cascading syle sheet used to styling the html tags
+    div (ie:selector){
+        color(ie:property) : red(ie:value);
+    }
+
+    so div ka color red hojega
+
+2) ways to add css in html 
+  2.1) Inline css ->  means html tag ke sth hi likhte hai. eg  <h1 style="color: blue">Welcome to CSS tuit</h1>
+  2.2) Internal -> When we add cs propertie in the HEAD tag 
+  2.3) External [preffered] -> when we add css propertiein a seperate CSS file and link to HTML File 
+
+
+[h1,div,p] -> Block levelElements
+
+<style>
+      h1 {
+        /* h1 is element selector */
+        color: brown;
+        background-color: cadetblue;
+      }
+
+      p {
+        color: purple;
+        /* opacity means kitna transparent rakhna hai  means opacity kam hojegi->  */
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <h1 style="color: blue">Welcome to CSS tuit</h1>
+    <p style="background-color: crimson">Bby Arshdeep Singh</p> -->
+
+    <!-- Inline CSS -->
+    <h1>Welcome to CSS tuit</h1>
+    <p>Bby Arshdeep Singh</p>
+    <p>hey</p>
+  </body>
+
+
+CSS 2ND CLASS -> 
+3) JO baad me property hoti hai uski priority jyda hoti hai to vo apply  hoti hai 
+    eg: h1 {
+        color: red;
+    }
+    h1{
+        color: blue;
+    }
+    h1{
+        color:pink;
+    }
+
+    // Toh overall Color will be pink kyuki baad me apply hui hai
+
+
+
+
+
+
+
+
+
+
+

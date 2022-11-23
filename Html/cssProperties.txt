@@ -1,0 +1,1121 @@
+Block levelElements -> div, h1-h6, p , ul ,li , Table 
+Inline levelElements -> em , span , a , img , video , 
+
+[Note] -> Jo properties baad me hoti hai uski priority jyda hoti hai 
+eg: div {
+    color:red;
+}
+div{
+    color:green; // so green ki priority jyda hogi
+}
+
+2) Selector {
+    property:value;
+} 
+2.1) element selector -> div { }
+2.2) class selector -> .className { }
+2.3) id selector -> #idName { }
+2.4) universal Selector -> * { } sab pr apply hojega 
+
+3) How to target specific elem, we can using attribute  or giving them a "id" 
+a[href="instagram"] {
+  color: orange;
+}
+
+4) Agr andr child select krne ho to how we do ? => div > p > h1 [div ke andr p tag ke andr h1 tag]
+
+properties ---------------------------->
+
+1) color: red; [change text color]
+2) background-color: black;
+
+--------------------------------- Text $ font Related properties ---------------------------->
+
+1) font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+2) font-size: larger; // bydefault Medium 
+            : xxsmall;
+            : xxlarge;
+            : 200px; 
+3) font-style:italic;
+4) font-weight: 600; [100-900 range] Means kitna mota bold rakhna hai text 
+    900 is very bold 
+
+5) text-align:center; // bydefault: left side -> coz left se start hota type hona 
+             :left;
+             :right;
+             :justify; [means yeh left right puri space fill krne ki try krega]
+
+6) text-transform:capitalize; // sare word ka first letter capital hojega 
+    :uppercase; // sare text capital letter me aajege 
+    :lowercase; // sare text lower case me aajege 
+
+7) text-decoration: underline; // sare text me underline aajegi 
+    :overline; // isse text ke upr line aajegi 
+    :line-through; // text ke bheech se cut lg jaega 
+
+8) text-indenent:50%; // means jo bhi paragaraph start hora hai unka starting se gap dedega 
+                    sare text ka 
+
+9)  line-height: means puri line ki height cover krega and jo bhi next line hogi vo itna gap rakh kr start hogi 
+
+10) letter-spacing:20px -> har letter ke bheech me 20px ka gap aajega 
+
+11) word-spacing: 20px -> har pure word ke bheech me 20px ka space aajega 
+
+12) text-shadow: x-cordinate y-cordinate kitna blur chaiye konsa color chiaye (0 0 5px black)
+                x cordinate means x direction me shift hojegi shadow thodi and similarly Y
+                and - me put krege to left side se hojegi and y me - denge to upr ki trf shift hojegi  
+
+-------------------------------------BACKGROUND PROPERTIES ----------------------------------------------------------------------------------------------------
+1) background-image : url('/path') -> agr same folder me hai to direct file name dedege and agr dusre folder me hai 
+                to pura complete path denge 
+
+
+2) background-repeat:no-repeat; [jo image li vo repeat hongi but isse repeat nahi hogi ]
+                    :repeat-x [x direction me repeat hojegi ]
+                    :repeat-y [y direction me repeat hogi ]
+
+3) background-Attachment:fixed; [isse ik position pr fixed hojegi image]
+
+4) background-size:cover; // puri image cover krlegi yeh photo 
+
+5) background-position: 10px(x-axis) 10px(y-axis) [means x axis se y axis se gap aajega ]
+                      : top (top me shift hojegi img) 
+                      : left (left size me shift hojegi image)
+                      : center (center me shift hojegi)
+                      : 25% (x axis) 75% (y axis)
+                      :bottom 150px right 100px [Means bottom se 150px upr hojega and right se 100px ka gap aajega]
+                
+
+6) backgroundColor: red; 
+
+-----------------------------------------class 7 -------------------------------------------------------------------------------------------------------------------
+
+CSS UNITS -------->
+TWO TYPES OF UNITS
+1) Relative -> means jiski koi value fixed nahi hai.Eg: 20% rupee do 20 percent kuch bhi agr 100 hai to uske alag honge and 200 ka 20% alag fixed nhi h
+2) Absolute -> means 20 rupee do means fixed rupee hogye 
+
+1) Relative --------------> 
+
+1) percentage -> Means ye parent ka jakr size dekhta hai or uska utne percent deta hai 
+
+eg: font-size: 100%;  h1 ke andr hai yeh h1 ka parent hai body, body ka default size 16px hai 
+so yeh 100% hogyi 16px ie 16px 
+
+
+2) em -> 1em = 100% so 2em = 200% -> ye bhi apna parent element ke paas jakr uske hisab se deta hai
+
+3) rem -> root element ie HTML element ke hsab se deta hai 
+
+eg: 2 rem -> ye apne root element ke pas jaega ie <html> and uska 200% dedega
+by default html 16px so iska 32px hojega 
+
+
+4) vw -> viewPort  width
+eg: font-size:10vw; // 10vw means jo bhi width hai screen ki uska 10percent lelega 
+
+
+5) vh -> viewport height 
+eg: font-sie:10vh ; // 10vh means jo bhi screen ki height hai uska 10 percent lele 
+
+6) vmin -> 
+eg: font-size: 10vmin; // yeh check krega ki height or width kya kya hai screen ki 
+    "JO BHI KAM HOGI TO USKA 10% LELEGA" 
+
+7) vmax -> 
+eg: font-size: 10vmax; // yeh check krega ki height or width kya kya hai screen ki 
+    "JO BHI MAXIMUM HOGI TO USKA 10% LELEGA" 
+
+
+[RELATIVE UNITS & vw or vmax both are same and mostly used]
+
+
+2) ABSOLUTE UNITS [fixed]
+eg: font-size:20px; -> fixed 20 pixels 
+
+
+------------------------ VIDEO 8 ------------------------------------------------------------------------------------------
+
+ul {
+  iske andr jo bhi li tag honge vo inherit krlege so li ko alag se nhi dege 
+  list-style-type: none; 
+  list-style-type: decimal; 
+  /*disc, circle,decimal, loweralpha, square
+   inside [position change krne ke liye, outside, url(image path bhi de skte bullet ki jgh aajegi)*/
+
+  /* we can give short hand properties as well */
+  list-style: circle inside;
+}
+
+
+-----BOX MODEL VERY VERY VERY IMPORTANT -------
+Jb koi element bnate hai hm HTML me vo isi way me bnta hai 
+content -> padding (box ke andr ka free space ) -> Border -> Margin [border ke bhar ka]
+
+.small {
+  margin: 20px; /* [charo taraf se lelega ]Margin -> ye bhar ka jo space hota hai element ke bhaar ka usko move krwata hai */
+  margin: 20px 50px; /*top bottom, left right*/
+  margin: 20px 50px 30px 10px; /*top right bottom left */
+  padding: 20px; /* andr ke free space ko padding bolte hai jo element or content ke bheech ka free space hota hai */
+  border: 10px solid black; /*short hand property - solid,dashed*/
+  width: 200px;
+
+  overflow: hidden; /*Agr content over flow hora hai toh use this, hidden -isme jo bhi bhar jara hai vo remove hojega kuch nhi dikhega */
+  overflow: scroll; /* scroll baar ajega horizontal vertcal, to scroll krke dekh skte hai */
+  overflow: auto; /*Jb need hogi tb apne aap lelega margin */
+}
+
+/* 
+NOTE -> width set kri hui 200px , so jo width set kri hai vo andr wale content ki kri hai 200px 
+so width calculate krege vo sabko include kregi padding + border + margin 
+*/
+
+
+----------------------------------video 9 css landing page properties ----------------------------------------------------------------------------------------------------------------------
+
+
+/* 
+notes ->
+1) as a beginner koi bhi elementdesign krre hai to start hote uska border dedo, and height  
+2) Body ka kuch margin hota hai bydefault to usko 0 krege -> using universal selector
+3) Important -> Margin: auto: [margin dene ke liye ik display block element hona chaiyem,
+    and margin : uto ke liye width deni  neccesaary hai and display block
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+header {
+  /* border: 2px solid black; isko comment krdo after completing the nav bar*/
+  /* height: 100px; */
+  padding: 50px;
+  /* box-sizing: border-box;*/ /*because jo padding humne add kri hai, uski vjah se height bdh rhi hai header ki, so border box se usi me fix hojega
+   ie 100px ke andr andr padding ajegi*/
+  background-color: crimson;
+}
+
+header a {
+  color: beige; /* color: change text color jo a tag hai uska */
+  text-decoration: none; /* jo a tag ke niche underline aari thi usko remove krdega */
+  margin: 0px 20px; /* top bottom, left right */
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+header > a:hover {
+color: brown;
+}
+
+section {
+  /* border: 2px solid black; */
+  height: 400px;
+  width: 1000px;
+  margin: auto;
+  background-image: linear-gradient(
+    to bottom,
+    rgb(232, 127, 127),
+    rgb(152, 25, 51)
+  );
+  /* gardient -> means combination of 2 or 3 colors; 
+  1st hme direction btani hoti hai.: to bottom  (means jo bhi flow hai vo niche ke taraf jana chaiye
+  2nd hme color denge 
+  3 bhi color denge, so */
+  text-align: center;
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+section > h1 {
+  font-size: xx-large;
+  /*border: 1px solid black;*/ /* so jo bhi image lgaege vo iske niche aayegi */
+}
+
+section > img {
+  display: block;
+  width: 300px;
+  border-radius: 30px;
+
+  margin: auto;
+}
+
+footer {
+  /* border: 2px solid black; */
+  height: 100px;
+  width: 1000px;
+  margin: auto; /* Taki center me aje, jbhi auto prop use krege to dislay block honi  chiaye and width honi chiye*/
+  background-color: rgb(15, 13, 13);
+  text-align: center;
+  padding: 50px; /* ye overflow hora hai means jo hmne heigth di hai use bdi hori hai so box sizing border box denge*/
+  box-sizing: border-box;
+}
+
+footer > a {
+  /* border: 2px solid red; */
+  text-decoration: none;
+  color: white;
+  display: block;
+  /* text-align: center;*/ /* work nhi kra kyuki yeh block element nhi hai , so parent ko denge tbhi apply hojega*/
+}
+
+--------------------------------------- VIDEO 10 -------------------------------------------------------------------------------------------------
+
+-------------FLOAT,DISPLAY, POSITION CSS ----------------
+
+FLOAT PROPERTIES -> Means air me float krega or vo space khali hojegi and niche wala upr aaje uske 
+
+EG:
+<style>
+      body {
+        border: 2px solid black;
+      }
+      div {
+        width: 100px;
+        height: 100px;
+      }
+      #first {
+        background-color: burlywood;
+        float: left;
+      }
+      #second {
+        clear: left; /* */
+        background-color: crimson;
+        float: left; /*yeh right side me float krega air me and iski row puri khali thi to 3rd div iski jgh aajega puri row lega and 2nd right side me air me hoga*/
+        /* 1st or 2nd div alag line me aare hai or yeh 3rd wala 2nd row ke sth aara hai why?
+        coz float property use kri to 1st wala float hokr left me aagya 2nd wala float hokr left me pahunch gya 
+        To vo first wali div ke jgh pr hi pahunch jata left me but isne dekha ki hmne kra hua ki pehle se koi agr 
+        float property lgi hui left me tumhare upr wali element me to use clear krdo
+        
+        but jb hmne 3rd wale ko float propert di to usne dekha ki upr wali element khud hi float hora hai jgh dikhi to agya 
+        kyuki third me thodi bola hai float property upr wale element se milri hai to use clear krdo
+        NOTE-> Jisko hm nhi chate ki effect pdhe to usko clear property denge jo upr wale element ko di hai vo same 
+
+        eg: upr walo ke float:right diya to niche wale ko chahte hai ki koi effect na ho 
+        To usko clear:right:  denge;
+        
+        */
+      }
+      #third {
+        background-color: chartreuse;
+        float: right;
+        /*clear: left;*/ /* Jis pr bhi effect nhi dena uspr ye property lgadege
+        means isko btadiya hai ki left side se float property ayegi to usko consider nhi krna hai*/
+      }
+    </style>
+  </head>
+  <!-- Float property means -> Agr kisi ko denge to vo element Air me float krega 
+    eg: 
+
+
+-->
+  <body>
+    <div id="first">1</div>
+    <div id="second">2</div>
+    <div id="third">3</div>
+  </body>
+  --------------------------------
+
+DISPLAY PROPERTIES ----> 
+
+1) div -> It is block level element, Agr kisi inline element ko block bnana hoga to 
+ display block -> it will convert inline to block elements
+display - inline -> it will convert block ele to inline 
+display: inline-block -> ispr dono properties apply ho skti hai 
+
+--------------------------------------
+
+POSITION PROPERTIES ----> 
+ 
+ types of position -> static, relative , absolutem fixed and sticky 
+
+1) static -> bydefault static hoti hai position, Agr kisi ko static denge to ki change nhi aayega 
+2) position : relative; -> normall yeh denge to kuch nhi hoga iske sth 4 properties unlock hojegi 
+  [ top left right bottom ] inme se bhi koi ik deni hogi tb relative work krega
+
+  so relative propertie -> IT IS RELATIVE TO ITS NORMAL POSITION 
+  overall ->  isme jo change aayega "vo APNI ACTUAL POSITION KE HISAB SE AAYEGA"
+
+3) position : Absolute -> Means Its is relative to its parent element 
+Means jisko bhi denge yeh apne parent element se utne distance pr chla jaega 
+
+4) position : sticky and iske sth top bottom  left rigth inme se koi ik denge 
+ isse ik jgh pr sticky hojega baki content move hoga but jispr yeh prop di hai vo move nhi hoga
+  eg: usuall y give in navbar 
+
+5)  position:fixed; 
+  bottom:0px 
+  right:0px; -> ye iss fixed hojega sab hil skta hai but yeh nhi.Eg: chatBot symbol banana ho tb use krte hai 
+
+
+---------------------------------------LECTURE 11 STYLYING FORM USING CSS  ------------------------------------------------------------------------------------------
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+form {
+  /* border: 1px solid red; */
+  max-width: 800px;
+  margin: auto;
+  background-color: rgb(156, 154, 154);
+  padding: 10px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+form > div {
+  margin: 10px auto;
+  width: 80%;
+}
+h1 {
+  text-align: center;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="password"],
+select,
+textarea {
+  width: 80%;
+  padding: 10px;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+}
+
+input[type="submit"] {
+  width: 120px;
+  padding: 5px;
+  font-size: medium;
+  font-weight: 600;
+  /* font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif; */
+  /* button is inline element so usko block bnana pdhega to apply text align */
+  display: block;
+  margin: 20px auto; /*top bottom, left right */
+  border: none;
+  background-color: crimson;
+  border-radius: 20px;
+  color: white;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: rgba(161, 20, 48, 0.87);
+}
+
+
+------------------------------------------------------LEC 12 DEBUG CSS ------------------------
+
+
+In chrome -> Inspect -> Console ke niche styles hoga 
+element ->  isme check krliya, select krke uske upr lekr jao jisko select krna hai 
+
+Jis element ko  select krege console me Uski CSS ajegi  Or hata kr bhi de skte hai 
+
+
+And property copy kke paste into HTML 
+
+clas bhi de skte hai idr or usko edit bhi kar skte hai Plus pr click krege to clss add hojegi 
+
+
+----------------------------------------LEC 13 PROJECT 1 CREATING WEBSITE---------------------------------------------------------------
+
+/*
+1) background me image add krli 
+2) Navbar -> In header Tag -> Jbhi koi elem bnae usko border dedo 
+
+2.1) 2 box hai ik ik krke so hum chahte hai ki ik line me aaje , dispaly:inlineBlock
+*/
+
+body {
+  background-image: url("./bg.webp");
+  margin: 0;
+  padding: 0;
+  height: 110vh;
+}
+
+header {
+  /* border: 1px solid white; */
+  color: white;
+  padding: 20px;
+  font-family: "Roboto Slab", serif; 
+  position: sticky;
+  top: 0;
+}
+
+.logoBox {
+  /* border: 1px solid red; */
+  display: inline-block; /*Inline Taki ik line me aaje */
+  width: 150px;
+  font-weight: 600;
+  font-size: larger;
+  cursor: pointer;
+  /* transition: all 0.5s; */
+}
+
+/* .logoBox:hover {
+  color: salmon;
+} */
+
+.navBox {
+  /* border: 2px solid green; */
+  display: inline-block; /* Isko bhi inline block di Taki ik line me aaje*/
+  width: 600px;
+  position: absolute; /*absolute -> means it is relative to its parent */
+  right: 20px; /*means right se 20px ke gap pr ho */
+}
+
+.navBox a {
+  color: white;
+  text-decoration: none;
+  margin: 0px 30px;
+  transition: all 0.5s; /*Means hover krne par color change hora tha immediatley to isse nahi hoga -> 0.5 microsecond*/
+}
+
+.navBox a:hover {
+  color: salmon;
+}
+
+#home {
+  color: salmon;
+}
+
+.heading {
+  /* border: 1px solid white; */
+  color: salmon;
+  font-size: 60px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  /* Text ko niche krna hai upr chipak rha hai: so postion:relative -> relative to its normal position*/
+  position: relative;
+  top: 60px;
+  left: 70px;
+  width: 500px;
+}
+
+.heading + h3 {
+  /* border: 1px solid white; */
+  color: white;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 40px;
+  position: relative;
+  top: 30px;
+  left: 80px;
+  width: 500px;
+}
+
+.heading + h3 + p {
+  /*'+' means Adjacent sibling selector -> h3 ka sibling p tag hai 
+  adjacent means just sath wala */
+
+  /* border: 1px solid white; */
+  color: rgb(255, 255, 255);
+  font-family: "Roboto Slab", serif;;
+  position: relative;
+  font-style: italic;
+  left: 80px;
+  width: 400px;
+  word-spacing: 4px;
+  top: 20px;
+}
+
+.btn {
+  width: 150px;
+  padding: 16px;
+  border: none;
+  display: block; /*Bbecause yeh inline elemn hai*/
+  background-color: salmon;
+ font-family: "Roboto Slab", serif;
+  color: black;
+  position: relative;
+  left: 80px;
+  top: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.5s; /* Means half second me change hoga color*/
+}
+
+.btn:hover {
+  background-color: rgba(0, 0, 0, 0.34);
+  color: white;
+}
+
+footer {
+  /* border: 1px solid white; */
+  color: whitesmoke;
+  position: fixed;
+  bottom: 10px;
+  font-family: "Roboto Slab", serif;
+}
+
+/* &copy: isse copy right ka symbol aajega  */
+
+
+
+----------------------------------------LEC 14 HOW TO MAKE RESPONSIVE WEBSITE -------------------------------------------------
+
+Responsive means -> Means laptop me layout alag and jb phone me open kra to layout change hogya that is responsive 
+Device ke according  jo apne aap size sahi krle that is responsiveness 
+ 
+ To make responsive we use media query:
+
+  <style>
+    body {
+      background-color: peachpuff;
+    }
+
+    div {
+      background-color: crimson;
+      width: 21vw;
+      height: 21vw;
+      margin: 50px;
+    }
+
+    /* screen means kiski baat hori hai konsi media query like screen,
+      print ya voice , screen means sirf display the screen 
+      
+      -> all -> means sare deveice ke liye 
+      -> maxWidth -> means 0 - 1000 px tak hai to hi yeh wali properties apply hongi
+            jo isme likhege
+
+
+        2) Three ways  to make responsiveness
+        1) mediaquery -> least try krege ki na use kre
+        2) flexBox -> yeh use krege hi krege
+        3) Use responsive/relative units -> like vw, vmax, vh, vmin
+             vw -> screen ki width ka 20%
+
+             More responsiveness check on INternet but aspect ratio and maxwidth are enough
+      */
+
+    @media all and (max-width: 1000px) {
+      body {
+        background-color: aqua;
+      }
+      div {
+        background-color: green;
+      }
+
+      /* is ke andr sari styling de skte hai */
+    }
+  </style>
+
+
+---------------------------------------LEC 15 FLEX BOX V IMP ----------------------------------------------------------
+
+Baic Layout ->
+
+Eg: div is empty Box, isko agr flexBox bnadege to yeh flex Container bn jaega 
+
+1) display ya to block hoti ya incline, so agr kisi bhi div ko display:flex krege toh vo flex container bnjaega
+    and  uske andr jo bhi cheeze aayegi vo " ya to row ke form me aayegi ya to column ke form me "
+
+2) x axis -> It is main Axis [start point is main Start, end point of line is "main end"]
+   y axis -> It is cross Axis [cross point is main Start, end point of line is "cross end"]
+
+3) Jis bhi div ko flex container bnaya now uske andr jo bhi cheeze aayegi vo "FLEX ITEMS HONGI" and bydefault 
+   "ROW ME aayegi" chaiye un item ki dispaly block ho ya inline toh 
+   "ROW me" aayegi
+
+/* 
+1) div jo hai vo block element hai -> means puri row cover krra hai 
+2) flex container ->  body ko bnaya jise alag alag row me aare the sar ab ik row me aayege 
+
+container properties: ->
+justify -> main axis ki baat hori h means, [container me lgti hai yeh bhi , jisko flex diya hai]
+
+1) justify content: center, 
+                 :flex-start(start me aajege sare), 
+                 :flex-end (end me aajege sare),
+                 :space around ( sare div jo hote hai sabka margin equal distribute hojata hai)
+                 :space-between (har item ke bheech me equal space aajega -> 1st and last wale me nhi aayega)
+                 :space-evenly (har ke bheech me ikdum equally margin aayega , space around -> isme left or right ka margin equal tha
+                 but in this sabke bheech me equal hai)
+
+align items -> FOR Y AXIS OR CROSS AXIS [container me lgti hai yeh bhi , jisko flex diya hai]
+
+1) align-items: center, (vertically se center me aajege)
+              :flex-end (vertically ikdum niche aajega)
+              :flex-start (vertically ikdum upr aajega)
+              :flex-start (vertically ikdum upr aajega)
+              : stretch (jitne bhi item hai vo "sare stretch hojate starting se end tak"
+              but condition i ki height ni honi chaiye item ki
+              
+
+PROPERTIES FOR FLEX ITEMS
+
+1) align-self: flexend[vertically] baki prop all are same as above
+2) justify-self:center [horizontally] baki all prop are same
+
+
+FLEX-DIRECTION  -> ONLY APPLY TO FLEX CONTAINER
+
+1) flex-direction: row [default]
+                 : column [  sare column me aajege ]
+                 : column-reverse [column me rhege bss reverse order me ]
+                 : row-reverse [row me rhege bss reverse order me] 
+
+
+[NOTE -> Flex direction column krne ke baad , justify jo hota hai v y axis ke liye hojta hai
+and align item jo hai vo as a 'X'axis count hota hai ] 
+
+
+FLEX-WRAP:WRAP; Means agr 1 row me pure items nhi aare to it will go into the second row
+align-content:center; -> Like wrap krne ke baad verticall item me gap aajata hai usko remove krega yeh
+
+*/
+
+--------------------------------------LEC 16 ECOMMERCE WEBSITE USING FLEX BOX ---------------------------------------------------------------------------------------------------
+
+
+1) CREATE NAVBAR ->  using nav tag 
+ 1.1) usme dekho ki kya kya hai left jisme logo aayega 
+        mid - jisme menu aayega 
+        right - cart section aayega 
+    
+ 1.2) styling -> teeno ko border dedo and width -> try to use vw or vmax
+ 
+ nav {
+  /* border: 2px solid green; */
+  height: 4vmax;
+  display: flex;
+  align-items: center; /* Taki sb vertical arrange hoje*/ 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.513) ;
+}
+
+.left {
+  /* border: 2px solid salmon; */
+  width: 20vw;
+  /* or 20% of nav */
+  display: flex;
+  justify-content: center;
+}
+
+.left > a {
+  /* border: 1px solid yellowgreen; */
+  text-decoration: none;
+  color: crimson;
+  font-size: 2vmax;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  /* jo "6PP logo" hai vo left side me hai to usko mid me krna hai -> 
+  ways 1st textalign:end  krde 
+  2 -> left wale ko display flex de skte hai, left class ko kyuki parent hai
+  3 -> marginLeft de skte hai
+  */
+}
+
+.mid {
+  /* border: 2px solid rgba(226, 97, 226, 0.998); */
+  width: 60vw;
+  display: flex;
+  justify-content: space-evenly;
+  align-self: stretch; /* Taki jo niche borderbottom aara hai vo aata rhe vo upr na jaye, so ya to stretch property do ya fir height nav jitni kro*/
+}
+
+.mid > a {
+  /* border: 2px solid blue; */
+  text-decoration: none;
+  font-size: 1.4vmax;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: black;
+  width: 100%; /* Taki jo element hai vo puri lines le, but yeh kyu krra ?  taki brder jo hai sirf bottom se aaye */
+  display: flex; /*Taki andr ke item center pr aaje */
+  justify-content: center;
+  align-items: center;
+}
+
+.mid > a:hover {
+  border-bottom: 2px solid crimson;
+  color: crimson;
+}
+
+.right {
+  /* border: 2px solid rgb(258, 248, 114); */
+  width: 20vw;
+  display: flex;
+  justify-content: center;
+}
+
+.right > img {
+  font-size: 2.5vmax;
+}
+
+
+------------------------------
+
+2) Make a Banner [Home] Section -> using section tag and give some styling to this 
+
+    what we want ki -> left side ik btn h enrol now and usi ke upr heading ho, right sde me logo ho 
+
+ 2.1) section ko bhi parts me divide krege like home section -> isko flex krege 
+ to 2 parts, ik left container or ik right container, dono ka same name assume krege 
+
+.home {
+  /* border: 2px solid crimson; */
+  height: 90vh; /*90%  */
+
+  background-image: radial-gradient(rgb(230, 221, 255), rgb(184, 184, 223));
+  /* background-image: linear-gradient(
+    to right,
+    rgb(152, 152, 216),
+    rgba(157, 0, 255, 0.516)
+  ); */
+  /*Gradient means color bnare hai -> 
+    1) 1st param - direction -> right ki trf chaiye
+    2) color
+    3) color
+    */
+  display: flex;
+}
+
+.container {
+  height: 100%; /*100% of parent ie body */
+  width: 100%;
+  /* border: 1px solid green; */
+}
+
+#rightContainer {
+  /* image jo aari hai chipki chipki aari hai so usko change krege*/
+  display: flex;
+  justify-content: flex-end;
+}
+
+#rightContainer > img {
+  margin-right: 7vmax;
+  filter: drop-shadow(
+    0 0 20px black
+  ); /*Taki image ke background me shadow aaje */
+}
+
+#leftContainer {
+  /* border: 1px solid red; */
+  display: flex;
+  flex-direction: column;
+  padding: 3vmax;
+  box-sizing: border-box;
+  justify-content: center;
+}
+
+#leftContainer > h1 {
+  /* border: 1px solid red; */
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 5vmax;
+}
+
+#leftContainer > h2 {
+  /* border: 1px solid red; */
+  margin-top: -3%;
+  font-family: sans-serif;
+  font-size: 2vmax;
+  margin-left: 2%;
+}
+
+#leftContainer > p {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.2vmax;
+  /* border: 1px solid red; */
+  margin-left: 2%;
+}
+
+#leftContainer > button {
+  margin-top: 20px;
+  padding: 1vmax;
+  width: 11vmax;
+  border-radius: 2vmax;
+  border: none;
+  background-color: crimson;
+  color: white;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  cursor: pointer;
+  margin-left: 2%;
+}
+
+#leftContainer > button:hover {
+  background-color: rgb(164, 35, 61);
+}
+
+
+---------------------------------------------------------------------------------------------------------
+
+3) PRODUCTS SECTION  
+
+/* ---------------PRODUCTS --------- */
+/* #products { 
+   height: 100vh; 
+  border: 1px solid green; 
+} */
+
+#products > h1 {
+  text-align: center;
+  margin: 5vmax auto; /*top bottom, left right */
+  font-size: 2.5vmax;
+  padding: 1vmax; /* kyuki border chipka hua aara hais */
+  border-bottom: 5px solid crimson;
+  width: 25vw;
+}
+
+.productsContainer {
+  display: flex;
+  justify-content: center;
+  /* background-color: aquamarine; */
+  flex-wrap: wrap;
+  /* justify-content: space-evenly; */
+  height: 100%;
+  max-width: 80vw;
+  margin: auto;
+}
+
+/* ----------------------------------- */
+.product {
+  /* border: 2px solid crimson; */
+  cursor: pointer;
+  transition: all 0.5s;
+  /* width: 22vmax; */
+  height: 30vmax;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1vmax;
+}
+.product > img {
+  /* border: 2px solid crimson; */
+  width: 20vmax;
+}
+
+.product > h4 {
+  margin: 2%;
+}
+
+.product > h5 {
+  margin: 0;
+}
+
+.product:hover {
+  transform: translateY(-10px);
+}
+
+/* ------------------------------------------------------ */
+
+
+-----------------------------------------------------------------------------------------------
+3) FOOTER SECTION -> ye cretae krke height width border and bc color dedo 
+Then html pr aao 
+
+3.1 -> make 3 section that are div -> left, mid, right
+
+
+footer {
+  margin-top: 10vmax;
+  /* height: 10vmax; */
+  padding: 2vmax;
+  background-color: rgba(0, 0, 0, 0.813);
+  color: white;
+  display: flex;
+
+  align-items: center;
+}
+
+.leftFooter {
+  width: 20vw;
+  /* border: 1px solid white; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.leftFooter > h4 {
+  margin: 2vmax;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.leftFooter > img {
+  width: 10vmax;
+  margin: 1vmax;
+  cursor: pointer;
+}
+
+.leftFooter > p {
+  text-align: center;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.midFooter {
+  width: 60vw;
+  /* border: 1px solid white; */
+  text-align: center;
+}
+
+.midFooter > h1 {
+  margin: 2vmax;
+  font-size: 4vmax;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: crimson;
+}
+
+.midFooter > p {
+  max-width: 60vw;
+  /* border: 1px solid white; */
+  margin: 1vmax auto;
+}
+
+.rightFooter {
+  width: 20vw;
+  /* border: 1px solid white; */
+  display: flex; /* coz a tag is inline element*/
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+}
+
+.rightFooter > h4 {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 1.4vmax;
+  text-decoration: underline;
+  margin: 3vmax;
+}
+
+.rightFooter > a {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 1.3vmax;
+  color: white;
+  text-decoration: none;
+  margin: 0.5vmax;
+}
+
+---------------------------------LEC 18 ANIMATION [GRID PENDING] ---------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

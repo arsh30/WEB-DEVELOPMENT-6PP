@@ -1,0 +1,140 @@
+/* * {
+  /* * -> universal selector 
+  background-color: black;
+  color: aqua;
+}
+
+/* we want ki sirf second paragraph ka color change ho -> so Id denge 
+#custom {
+  /* class selector -> dot class selector 
+  color: red;
+  /* color: initial; initial -> agr hum bhul jaye ki pehle konsa color tha to hum initial denge to pehle wala color aajega  
+}
+
+.custom{
+    color: orange;
+} */
+
+/* change color of all anchor tag */
+/* a {
+  color: red;
+} */
+/* we want ki 2nd wale ka hi sirf color green ho - so id dedo or use attribute selector*/
+
+/* #green {
+    color:green
+} */
+
+/* 2nd way to attribte selector */
+/* a[href="instagram"] {
+  color: orange;
+} */
+
+/* Chnage color of  span,div,em,h1 inka color chnage kro -> to comma lgakr chnge kr skte hai sabko*/
+/* span,
+div,
+em,
+h1 { classes bhi likh skte haii.....
+  color: brown;
+} */
+
+/* child selector eg div ke andr p */
+/* span > p {
+  color: chartreuse;
+} */
+
+/* ----------------- properties on ul and li------------------- */
+/* li {
+  list-style-type: disc;
+  color: red;
+} */
+
+/* 1) descendent selector (space) dalte hai andr ka agr element acces krna ho
+ */
+
+/* 2 ) child selecotr ( > )  means uss tag ke andr jitne bhi elem hai unko select krega */
+
+/* the below is descendent selector -> means jitne bhi li hai unke andr jitne bhi li hai unka hojega */
+/* li li {
+  color: aqua;
+} */
+
+/* child selector ( > )-> issme just ik position niche hona chaiye vo child jisko select krna h */
+/* li > li {
+  color: pink;
+} */
+
+/* 3) Adjacent sibling selector  ( + ) ->
+ eg: h1 ka adjacent p tag jo H ke sbse paas hoga vo hoga adjacent sele
+
+ */
+
+/* h1 + p {
+  background-color: orange;
+} */
+
+/* or 2nd example -> does not work because ul ka children hai li not a sibling*/
+/* ul + li { 
+  background-color: violet;
+} */
+
+/* 4) General sibling selector  (~)  */
+/* Eg: h1 ke sare sibling that are P tags */
+
+/* h1 ~ p {
+    background-color: purple;
+} */
+
+/* -----------------------------------Lecture 6 CSS ------------------------------------------------------------------ */
+
+/* p {
+  color: crimson;
+  
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: larger; /* bydefault it is medium 
+
+} 
+
+
+*/
+
+/*--------------------- Lecture 7 -------------*/
+
+/* h1 {
+  color: rgb(10, 10, 10);
+  font-size: 5em;
+
+} */
+
+/* -----------Lecture 8 ------------- */
+/* body {
+  font-size: 20px;
+  background-color: aquamarine;
+} */
+
+/* ul {
+  /*  iske andr jo bhi li tag honge vo inherit krlege */
+/* list-style-type: none; 
+list-style-type: decimal; /*disc, circle,decimal, loweralpha, square
+   inside [position change krne ke liye, outside, url(image path bhi de skte bullet ki jgh aajegi)*/
+
+/* we can give short hand properties as well 
+  list-style: circle inside;
+} */
+
+/* .small {
+  margin: 20px; 
+  margin: 20px 50px; 
+  margin: 20px 50px 30px 10px; 
+  padding: 20px; 
+  border: 10px solid black; 
+  width: 200px;
+
+  overflow: hidden; 
+  overflow: scroll;  
+  overflow: auto; 
+} */
+
+
+/* --------------------LEC 9 */
+

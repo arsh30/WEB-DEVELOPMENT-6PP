@@ -1,0 +1,128 @@
+/*
+1) background me image add krli 
+2) Navbar -> In header Tag -> Jbhi koi elem bnae usko border dedo 
+
+2.1) 2 box hai ik ik krke so hum chahte hai ki ik line me aaje , dispaly:inlineBlock
+*/
+
+body {
+  background-image: url("./bg.webp");
+  margin: 0;
+  padding: 0;
+  height: 110vh;
+}
+
+header {
+  /* border: 1px solid white; */
+  color: white;
+  padding: 20px;
+  font-family: "Roboto Slab", serif; 
+  position: sticky;
+  top: 0;
+}
+
+.logoBox {
+  /* border: 1px solid red; */
+  display: inline-block; /*Inline Taki ik line me aaje */
+  width: 150px;
+  font-weight: 600;
+  font-size: larger;
+  cursor: pointer;
+  /* transition: all 0.5s; */
+}
+
+/* .logoBox:hover {
+  color: salmon;
+} */
+
+.navBox {
+  /* border: 2px solid green; */
+  display: inline-block; /* Isko bhi inline block di Taki ik line me aaje*/
+  width: 600px;
+  position: absolute; /*absolute -> means it is relative to its parent */
+  right: 20px; /*means right se 20px ke gap pr ho */
+}
+
+.navBox a {
+  color: white;
+  text-decoration: none;
+  margin: 0px 30px;
+  transition: all 0.5s; /*Means hover krne par color change hora tha immediatley to isse nahi hoga -> 0.5 microsecond*/
+}
+
+.navBox a:hover {
+  color: salmon;
+}
+
+#home {
+  color: salmon;
+}
+
+.heading {
+  /* border: 1px solid white; */
+  color: salmon;
+  font-size: 60px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  /* Text ko niche krna hai upr chipak rha hai: so postion:relative -> relative to its normal position*/
+  position: relative;
+  top: 60px;
+  left: 70px;
+  width: 500px;
+}
+
+.heading + h3 {
+  /* border: 1px solid white; */
+  color: white;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 40px;
+  position: relative;
+  top: 30px;
+  left: 80px;
+  width: 500px;
+}
+
+.heading + h3 + p {
+  /*'+' means Adjacent sibling selector -> h3 ka sibling p tag hai 
+  adjacent means just sath wala */
+
+  /* border: 1px solid white; */
+  color: rgb(255, 255, 255);
+  font-family: "Roboto Slab", serif;;
+  position: relative;
+  font-style: italic;
+  left: 80px;
+  width: 400px;
+  word-spacing: 4px;
+  top: 20px;
+}
+
+.btn {
+  width: 150px;
+  padding: 16px;
+  border: none;
+  display: block; /*Bbecause yeh inline elemn hai*/
+  background-color: salmon;
+ font-family: "Roboto Slab", serif;
+  color: black;
+  position: relative;
+  left: 80px;
+  top: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.5s; /* Means half second me change hoga color*/
+}
+
+.btn:hover {
+  background-color: rgba(0, 0, 0, 0.34);
+  color: white;
+}
+
+footer {
+  /* border: 1px solid white; */
+  color: whitesmoke;
+  position: fixed;
+  bottom: 10px;
+  font-family: "Roboto Slab", serif;
+}
+
+/* &copy: isse copy right ka symbol aajega  */
