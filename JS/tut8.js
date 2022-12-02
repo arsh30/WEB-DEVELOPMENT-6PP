@@ -1,1 +1,5 @@
 //---------------- PROJECTS ---------------
+
+// 1st PEOJECT PARA GENERATOR
+
+// CHECK FOLDER -> PROJECT LEC 8 \ PARA GENERTAOR
